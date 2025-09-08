@@ -1,0 +1,296 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Admin-specific styles for AUR plugin */
+
+.aur-admin-container {
+    @apply max-w-full;
+}
+
+/* Tab navigation */
+.aur-tab-nav {
+    @apply border-b border-gray-200 mb-6;
+}
+
+.aur-tab-button {
+    @apply inline-block py-2 px-4 text-gray-600 hover:text-gray-800 border-b-2 border-transparent hover:border-gray-300 transition-colors duration-200;
+}
+
+.aur-tab-button.nav-tab-active {
+    @apply text-blue-600 border-blue-600;
+}
+
+.aur-tab-content {
+    @apply py-4;
+}
+
+/* Field management table */
+.aur-fields-table {
+    @apply w-full border-collapse;
+}
+
+.aur-fields-table th,
+.aur-fields-table td {
+    @apply p-3 border-b border-gray-200 text-left;
+}
+
+.aur-fields-table th {
+    @apply bg-gray-50 font-semibold text-gray-700;
+}
+
+.aur-fields-table tr:hover {
+    @apply bg-gray-50;
+}
+
+.aur-drag-handle {
+    @apply cursor-move text-gray-400 hover:text-gray-600;
+}
+
+.aur-field-row {
+    @apply transition-colors duration-200;
+}
+
+.aur-field-row.dragging {
+    @apply opacity-50;
+}
+
+/* Form controls */
+.aur-form-group {
+    @apply mb-4;
+}
+
+.aur-form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.aur-form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.aur-form-textarea {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+    resize: vertical;
+}
+
+.aur-form-select {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white;
+}
+
+/* Buttons */
+.aur-btn {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200;
+}
+
+.aur-btn-primary {
+    @apply text-white bg-blue-600 hover:bg-blue-700 focus:ring-blue-500;
+}
+
+.aur-btn-secondary {
+    @apply text-gray-700 bg-white border-gray-300 hover:bg-gray-50 focus:ring-blue-500;
+}
+
+.aur-btn-danger {
+    @apply text-white bg-red-600 hover:bg-red-700 focus:ring-red-500;
+}
+
+.aur-btn-success {
+    @apply text-white bg-green-600 hover:bg-green-700 focus:ring-green-500;
+}
+
+.aur-btn-small {
+    @apply px-2 py-1 text-xs;
+}
+
+/* Settings sections */
+.aur-settings-section {
+    @apply mb-8 p-6 bg-white border border-gray-200 rounded-lg shadow-sm;
+}
+
+.aur-settings-section h3 {
+    @apply text-lg font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2;
+}
+
+.aur-provider-section {
+    @apply mt-4 p-4 bg-gray-50 border border-gray-200 rounded-md;
+}
+
+/* Statistics cards */
+.aur-stats-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6;
+}
+
+.aur-stats-card {
+    @apply bg-white p-6 border border-gray-200 rounded-lg shadow-sm;
+}
+
+.aur-stats-number {
+    @apply text-2xl font-bold text-gray-900;
+}
+
+.aur-stats-label {
+    @apply text-sm text-gray-600 mt-1;
+}
+
+/* Modal styles */
+.aur-modal {
+    @apply fixed inset-0 z-50 overflow-y-auto;
+}
+
+.aur-modal-backdrop {
+    @apply fixed inset-0 bg-black bg-opacity-50;
+}
+
+.aur-modal-content {
+    @apply relative bg-white rounded-lg shadow-xl max-w-lg mx-auto mt-20 p-6;
+}
+
+.aur-modal-header {
+    @apply flex items-center justify-between mb-4 pb-4 border-b border-gray-200;
+}
+
+.aur-modal-title {
+    @apply text-lg font-semibold text-gray-900;
+}
+
+.aur-modal-close {
+    @apply text-gray-400 hover:text-gray-600 focus:outline-none;
+}
+
+.aur-modal-body {
+    @apply mb-6;
+}
+
+.aur-modal-footer {
+    @apply flex justify-end space-x-3 pt-4 border-t border-gray-200;
+}
+
+/* Notice styles */
+.aur-notice {
+    @apply p-4 mb-4 border-l-4 rounded-r-md;
+}
+
+.aur-notice-success {
+    @apply bg-green-50 border-green-400 text-green-800;
+}
+
+.aur-notice-error {
+    @apply bg-red-50 border-red-400 text-red-800;
+}
+
+.aur-notice-warning {
+    @apply bg-yellow-50 border-yellow-400 text-yellow-800;
+}
+
+.aur-notice-info {
+    @apply bg-blue-50 border-blue-400 text-blue-800;
+}
+
+/* Loading states */
+.aur-loading {
+    @apply opacity-50 pointer-events-none;
+}
+
+.aur-spinner {
+    @apply inline-block w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin mr-2;
+}
+
+/* Field options */
+.aur-field-options {
+    @apply mt-2;
+}
+
+.aur-field-options-input {
+    @apply w-full px-2 py-1 text-sm border border-gray-300 rounded;
+}
+
+/* Toggle switches */
+.aur-toggle {
+    @apply relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.aur-toggle.checked {
+    @apply bg-blue-600;
+}
+
+.aur-toggle.unchecked {
+    @apply bg-gray-200;
+}
+
+.aur-toggle-handle {
+    @apply pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out;
+}
+
+.aur-toggle.checked .aur-toggle-handle {
+    @apply translate-x-5;
+}
+
+.aur-toggle.unchecked .aur-toggle-handle {
+    @apply translate-x-0;
+}
+
+/* Help text */
+.aur-help-text {
+    @apply text-sm text-gray-500 mt-1;
+}
+
+/* Code blocks */
+.aur-code {
+    @apply bg-gray-100 border border-gray-300 rounded px-2 py-1 font-mono text-sm;
+}
+
+.aur-code-block {
+    @apply bg-gray-100 border border-gray-300 rounded p-4 font-mono text-sm overflow-x-auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .aur-stats-grid {
+        @apply grid-cols-1;
+    }
+
+    .aur-modal-content {
+        @apply mx-4 mt-10;
+    }
+
+    .aur-fields-table {
+        @apply text-sm;
+    }
+
+    .aur-fields-table th,
+    .aur-fields-table td {
+        @apply p-2;
+    }
+}
+
+/* WordPress admin integration */
+.wrap .aur-admin-container {
+    margin-right: 20px;
+}
+
+.wp-admin .aur-btn {
+    height: auto;
+}
+
+.wp-admin .aur-form-input,
+.wp-admin .aur-form-select,
+.wp-admin .aur-form-textarea {
+    box-shadow: none;
+}
+
+/* Custom scrollbar for code blocks */
+.aur-code-block::-webkit-scrollbar {
+    height: 8px;
+}
+
+.aur-code-block::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+}
+
+.aur-code-block::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded;
+}
+
+.aur-code-block::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+}
